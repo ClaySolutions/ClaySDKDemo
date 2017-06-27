@@ -1,3 +1,3 @@
 github "VirgilSecurity/virgil-foundation-x" "2.2.0"
 github "VirgilSecurity/virgil-sdk-x" "4.5.0"
-github "Arthurius/ClaySDK" "587ca195d4366ff6c2308d5447fc7de708adf529"
+git "git@bitbucket.org:claysolutions/claysdk.ios.git" "1.0.0"
