@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Palanquin-ExtraLight.ttf">
+            <string>Palanquin-ExtraLight</string>
+        </array>
+        <array key="Palanquin-SemiBold.ttf">
+            <string>Palanquin-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClaySDKDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ClaySDK for iOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgi-ph-pEo">
+                                <rect key="frame" x="16" y="40" width="343" height="36.5"/>
+                                <fontDescription key="fontDescription" name="Palanquin-ExtraLight" family="Palanquin" pointSize="20"/>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxk-o0-WlT" userLabel="PublicKeyView">
+                                <rect key="frame" x="0.0" y="96.5" width="375" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR APP'S PUBLIC KEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltE-hI-wMi">
+                                        <rect key="frame" x="20" y="20" width="335" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Ssj-CC-iuD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palanquin-SemiBold" family="Palanquin" pointSize="14"/>
+                                        <color key="textColor" red="0.34042459726333618" green="0.45523053407669067" blue="0.63790839910507202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgt-nD-YQI">
+                                        <rect key="frame" x="289" y="15" width="70" height="30"/>
+                                        <color key="backgroundColor" red="0.29411764705882354" green="0.42352941176470588" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Ioh-7o-qpB"/>
+                                            <constraint firstAttribute="height" constant="30" id="srm-zD-K3z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palanquin-SemiBold" family="Palanquin" pointSize="15"/>
+                                        <state key="normal" title="COPY">
+                                            <color key="titleColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.092261530458927155" green="0.12626820802688599" blue="0.25077030062675476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ltE-hI-wMi" firstAttribute="leading" secondItem="gxk-o0-WlT" secondAttribute="leading" constant="20" id="3DW-ap-ugr"/>
+                                    <constraint firstItem="ltE-hI-wMi" firstAttribute="top" secondItem="gxk-o0-WlT" secondAttribute="top" constant="20" id="GMZ-b4-cVR"/>
+                                    <constraint firstAttribute="trailing" secondItem="ltE-hI-wMi" secondAttribute="trailing" constant="20" id="fyq-Zv-geW"/>
+                                    <constraint firstItem="wgt-nD-YQI" firstAttribute="centerY" secondItem="ltE-hI-wMi" secondAttribute="centerY" id="mji-wK-XQH"/>
+                                    <constraint firstAttribute="trailing" secondItem="wgt-nD-YQI" secondAttribute="trailing" constant="16" id="tkB-af-4cU"/>
+                                    <constraint firstAttribute="height" constant="180" id="wGh-aK-6Vy"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pW-3a-cEo" userLabel="EncryptedKeyView">
+                                <rect key="frame" x="0.0" y="276.5" width="381" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASTE YOUR ENCRYPTED KEY HERE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEF-XK-RbV">
+                                        <rect key="frame" x="20" y="20" width="341" height="22"/>
+                                        <fontDescription key="fontDescription" name="Palanquin-SemiBold" family="Palanquin" pointSize="14"/>
+                                        <color key="textColor" red="0.34042459730000002" green="0.45523053409999997" blue="0.63790839909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xla-Q6-RfF">
+                                        <rect key="frame" x="16" y="50" width="349" height="130"/>
+                                        <color key="backgroundColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="5zh-wV-ire"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.049324057996273041" green="0.070413194596767426" blue="0.20354464650154114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Palanquin-ExtraLight" family="Palanquin" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BEF-XK-RbV" secondAttribute="trailing" constant="20" id="3BM-JV-CrU"/>
+                                    <constraint firstItem="BEF-XK-RbV" firstAttribute="leading" secondItem="5pW-3a-cEo" secondAttribute="leading" constant="20" id="8ih-yo-Hqg"/>
+                                    <constraint firstItem="xla-Q6-RfF" firstAttribute="top" secondItem="BEF-XK-RbV" secondAttribute="bottom" constant="8" id="9vV-MW-urK"/>
+                                    <constraint firstAttribute="bottom" secondItem="xla-Q6-RfF" secondAttribute="bottom" id="KIt-7z-CfU"/>
+                                    <constraint firstItem="BEF-XK-RbV" firstAttribute="top" secondItem="5pW-3a-cEo" secondAttribute="top" constant="20" id="aAE-zr-Vo3"/>
+                                    <constraint firstItem="BEF-XK-RbV" firstAttribute="centerX" secondItem="5pW-3a-cEo" secondAttribute="centerX" id="mzZ-nu-5sR"/>
+                                    <constraint firstAttribute="trailing" secondItem="xla-Q6-RfF" secondAttribute="trailing" constant="16" id="n8I-Bi-sq0"/>
+                                    <constraint firstAttribute="height" constant="180" id="nTM-Mf-oGG"/>
+                                    <constraint firstItem="xla-Q6-RfF" firstAttribute="leading" secondItem="5pW-3a-cEo" secondAttribute="leading" constant="16" id="zI6-5A-f9w"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-Q6-q3x">
+                                <rect key="frame" x="16" y="476.5" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.05604109913110733" green="0.80254048109054565" blue="0.39052665233612061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JVz-da-FYt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palanquin-SemiBold" family="Palanquin" pointSize="16"/>
+                                <state key="normal" title="OPEN DOOR">
+                                    <color key="titleColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="IcE-zt-93U">
+                                <rect key="frame" x="178" y="622" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="39X-2i-NW3"/>
+                                    <constraint firstAttribute="width" constant="20" id="HpT-IM-PFE"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mmt-Xy-kN3">
+                                <rect key="frame" x="16" y="145.5" width="343" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="oJN-MG-le8"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEaW8seI3l0JsVYEl/4EfACEwyvFdYZABYHoPSx8oludaAL+K3t2pDCPZ2MHi7Wg7vR6A+HMCWBWiz3zrnaMnGfg==">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Palanquin-ExtraLight"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Door opened successfully" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwU-5K-Eqx">
+                                <rect key="frame" x="23" y="548.5" width="336" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="w2u-cE-qfd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palanquin-ExtraLight" family="Palanquin" pointSize="16"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.79607843137254897" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.049324057996273041" green="0.070413194596767426" blue="0.20354464650154114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UNy-Q6-q3x" firstAttribute="top" secondItem="xla-Q6-RfF" secondAttribute="bottom" constant="20" id="2Yx-a9-qTD"/>
+                            <constraint firstItem="ZwU-5K-Eqx" firstAttribute="top" secondItem="UNy-Q6-q3x" secondAttribute="bottom" constant="22" id="8Bu-dt-MqV"/>
+                            <constraint firstItem="Mmt-Xy-kN3" firstAttribute="top" secondItem="ltE-hI-wMi" secondAttribute="bottom" constant="8" id="8lf-sW-mxf"/>
+                            <constraint firstItem="gxk-o0-WlT" firstAttribute="top" secondItem="Wgi-ph-pEo" secondAttribute="bottom" constant="20" id="G4D-6e-UI1"/>
+                            <constraint firstItem="5pW-3a-cEo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="6" id="GXE-qV-jJ5"/>
+                            <constraint firstItem="gxk-o0-WlT" firstAttribute="centerX" secondItem="Wgi-ph-pEo" secondAttribute="centerX" id="HCt-dQ-TL9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UNy-Q6-q3x" secondAttribute="leading" id="JvL-ZH-3g6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Wgi-ph-pEo" secondAttribute="leading" id="Kyi-l4-nxj"/>
+                            <constraint firstItem="gxk-o0-WlT" firstAttribute="leading" secondItem="5pW-3a-cEo" secondAttribute="leading" id="Pc3-wq-fAf"/>
+                            <constraint firstItem="IcE-zt-93U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VwO-sw-96D"/>
+                            <constraint firstItem="5pW-3a-cEo" firstAttribute="top" secondItem="gxk-o0-WlT" secondAttribute="bottom" id="ecl-G2-82q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UNy-Q6-q3x" secondAttribute="trailing" id="fHa-8Y-3L0"/>
+                            <constraint firstItem="ZwU-5K-Eqx" firstAttribute="centerX" secondItem="5pW-3a-cEo" secondAttribute="centerX" id="g1P-xh-rTN"/>
+                            <constraint firstItem="Mmt-Xy-kN3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="hwb-59-5ec"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IcE-zt-93U" secondAttribute="bottom" constant="25" id="idB-aH-6Av"/>
+                            <constraint firstItem="ZwU-5K-Eqx" firstAttribute="trailing" secondItem="UNy-Q6-q3x" secondAttribute="trailing" id="mwG-uj-XMh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wgi-ph-pEo" secondAttribute="trailing" id="ndh-Zr-t8I"/>
+                            <constraint firstItem="Wgi-ph-pEo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="nvY-XY-pEY"/>
+                            <constraint firstItem="gxk-o0-WlT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="s1o-wt-df3"/>
+                            <constraint firstAttribute="trailing" secondItem="Mmt-Xy-kN3" secondAttribute="trailing" constant="16" id="snT-AN-44v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="copyButton" destination="wgt-nD-YQI" id="LW7-om-S4Q"/>
+                        <outlet property="encryptedKeyField" destination="xla-Q6-RfF" id="gt2-UC-a75"/>
+                        <outlet property="messageLabel" destination="ZwU-5K-Eqx" id="gBb-EN-YVP"/>
+                        <outlet property="openDoorButton" destination="UNy-Q6-q3x" id="bGN-Vm-gxD"/>
+                        <outlet property="publicKeyField" destination="Mmt-Xy-kN3" id="Rqa-qh-Lae"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="20" height="20"/>
+    </resources>
+</document>
