@@ -35,6 +35,14 @@ class ViewController: UIViewController {
             action: #selector(didTapCopy),
             for: .touchUpInside
         )
+        encryptedKeyField.delegate = self
+
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard)
+        )
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,6 +96,20 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: OpenDoorDelegate {
+    /// Open handler
+    func didOpen(with result: ClayResult) {
+        if result == .accessDenied {
+            show(message: "Acces to the door denied")
+            return
+        }
+        if result == .accessGranted {
+            show(message: "Door opened successfully")
+            return
+        }
+
+        show(message: "Received unknown state from the door")
+    }
+
 
     func didFindLock() {
         show(message: "Lock found")
@@ -99,5 +121,24 @@ extension ViewController: OpenDoorDelegate {
 
     func didReceive(error: Error) {
         alert(title: "Error", message: error.localizedDescription)
+    }
+}
+
+extension ViewController: UITextViewDelegate {
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.resignFirstResponder()
+    }
+
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
