@@ -8,6 +8,7 @@
 
 import UIKit
 import ClaySDK
+import VirgilSDK
 
 class ViewController: UIViewController {
     @IBOutlet weak var encryptedKeyField: UITextView!
@@ -18,10 +19,17 @@ class ViewController: UIViewController {
 
     private var claySDK: ClaySDK?
 
+    private var crypto: VSSCrypto = VSSCrypto(defaultKeyType: .EC_SECP256R1)
+
+    //This is the API key for the Test Environment. update with the proper key before going to Production!
+    private let apiKey = "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKzrJ/m5JgQNDtu6H5Ftx33kibu+PIEjs6bcAK63ofbN3gz40p86qOw4E22/mZIOfojQVF0TLBjvl64TbTe7SrQ=="
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        claySDK = ClaySDK(delegate: self)
+        let ts = String(Date().timeIntervalSince1970)
+
+        claySDK = ClaySDK(installationUID: ts, apiKey: apiKey, delegate: self)
 
         publicKeyField.text = claySDK?.getPublicKey()
 
@@ -49,16 +57,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    func didTapOpenDoor() {
+    @objc func didTapOpenDoor() {
         let input = encryptedKeyField.text ?? ""
-        if input.characters.count == 0 {
+        if input.count == 0 {
             alert(title: "Error", message: "No encrypted text entered")
             return
         }
         claySDK?.openDoor(with: input, delegate: self)
     }
 
-    func didTapCopy() {
+    @objc func didTapCopy() {
         UIPasteboard.general.string = claySDK?.getPublicKey()
         show(message: "Public key copied")
         print("-------------------------------")
@@ -96,6 +104,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: OpenDoorDelegate {
+    func didReceiveTimeout() {
+        show(message: "Timeout reached")
+    }
+
     /// Open handler
     func didOpen(with result: ClayResult) {
         if result == .accessDenied {
@@ -138,7 +150,7 @@ extension ViewController: UITextViewDelegate {
         return true
     }
 
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 }

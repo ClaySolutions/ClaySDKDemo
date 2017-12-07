@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0211851F0E3597009BFE5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0211841F0E3597009BFE5A /* Extensions.swift */; };
 		8E1947631F01459000040720 /* Palanquin-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E1947611F01459000040720 /* Palanquin-ExtraLight.ttf */; };
 		8E1947641F01459000040720 /* Palanquin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E1947621F01459000040720 /* Palanquin-SemiBold.ttf */; };
 		8E67C5751EF959ED00066ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67C5741EF959ED00066ECC /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E0211841F0E3597009BFE5A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8E1947611F01459000040720 /* Palanquin-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Palanquin-ExtraLight.ttf"; path = "Resources/Palanquin-ExtraLight.ttf"; sourceTree = "<group>"; };
 		8E1947621F01459000040720 /* Palanquin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Palanquin-SemiBold.ttf"; path = "Resources/Palanquin-SemiBold.ttf"; sourceTree = "<group>"; };
 		8E67C5711EF959ED00066ECC /* ClaySDKDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClaySDKDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 			children = (
 				8E67C5741EF959ED00066ECC /* AppDelegate.swift */,
 				8E67C5761EF959ED00066ECC /* ViewController.swift */,
+				8E0211841F0E3597009BFE5A /* Extensions.swift */,
 				8E67C5781EF959ED00066ECC /* Main.storyboard */,
 				8E67C57B1EF959ED00066ECC /* Assets.xcassets */,
 				8E67C57D1EF959ED00066ECC /* LaunchScreen.storyboard */,
@@ -140,12 +143,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Clay Solutions";
 				TargetAttributes = {
 					8E67C5701EF959ED00066ECC = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = WPYCCEF658;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -189,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E67C5771EF959ED00066ECC /* ViewController.swift in Sources */,
+				8E0211851F0E3597009BFE5A /* Extensions.swift in Sources */,
 				8E67C5751EF959ED00066ECC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +230,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -233,7 +240,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -275,7 +286,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -283,7 +296,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -322,7 +339,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.my-clay.ClaySDKDemoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -340,7 +358,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.my-clay.ClaySDKDemoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
