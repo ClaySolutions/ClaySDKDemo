@@ -1,0 +1,34 @@
+PODS:
+  - ClaySDK (1.8.2):
+    - VirgilSDK (= 7.2.1)
+  - VirgilCrypto (5.5.0):
+    - VirgilCryptoFoundation (= 0.15.2)
+  - VirgilCryptoFoundation (0.15.2):
+    - VSCCrypto/Common (= 0.15.2)
+    - VSCCrypto/Foundation (= 0.15.2)
+  - VirgilSDK (7.2.1):
+    - VirgilCrypto (~> 5.5)
+  - VSCCrypto/Common (0.15.2)
+  - VSCCrypto/Foundation (0.15.2)
+
+DEPENDENCIES:
+  - ClaySDK (= 1.8.2)
+
+SPEC REPOS:
+  trunk:
+    - ClaySDK
+    - VirgilCrypto
+    - VirgilCryptoFoundation
+    - VirgilSDK
+    - VSCCrypto
+
+SPEC CHECKSUMS:
+  ClaySDK: 9be2bd300ffa703fefb6be55c40d36d3c7fb11b1
+  VirgilCrypto: 48116c3abee03662dbae40d0957df5160c2a7128
+  VirgilCryptoFoundation: a804f11b826cefed157d7ef3d99f897e811cd971
+  VirgilSDK: 6ac72d992d329bf4a30020850a2df6880d06592d
+  VSCCrypto: 6cb5595d080b0a343819f44524f41df8587dab6c
+
+PODFILE CHECKSUM: eb85d01b427670a8e46adfee8ba89c7b4e6d81ec
+
+COCOAPODS: 1.10.0
