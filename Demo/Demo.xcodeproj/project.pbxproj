@@ -3,26 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348054FD257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348054FC257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework */; };
+		348054FE257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348054FC257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34805509257FD88D00EF13BC /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805508257FD88D00EF13BC /* LoginPresenter.swift */; };
+		348086912580CE50001A0F41 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348086902580CE50001A0F41 /* UserDefaults.swift */; };
 		34ABF8292578E62A00C9FCEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABF8282578E62A00C9FCEE /* AppDelegate.swift */; };
 		34ABF82B2578E62A00C9FCEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABF82A2578E62A00C9FCEE /* SceneDelegate.swift */; };
-		34ABF82D2578E62A00C9FCEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABF82C2578E62A00C9FCEE /* ViewController.swift */; };
+		34ABF82D2578E62A00C9FCEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABF82C2578E62A00C9FCEE /* LoginViewController.swift */; };
 		34ABF8302578E62A00C9FCEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34ABF82E2578E62A00C9FCEE /* Main.storyboard */; };
 		34ABF8322578E62C00C9FCEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34ABF8312578E62C00C9FCEE /* Assets.xcassets */; };
 		34ABF8352578E62C00C9FCEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34ABF8332578E62C00C9FCEE /* LaunchScreen.storyboard */; };
 		50FD2925C9337065173907B6 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D276E3438E06455990AC1EA /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		348054FF257FBBE900EF13BC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				348054FE257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		08E7CA67124E0226F3D7A762 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		0D276E3438E06455990AC1EA /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		348054FC257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SaltoJustINMobileSDK.xcframework; sourceTree = "<group>"; };
+		34805508257FD88D00EF13BC /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		348086902580CE50001A0F41 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		34ABF8252578E62A00C9FCEE /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34ABF8282578E62A00C9FCEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34ABF82A2578E62A00C9FCEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		34ABF82C2578E62A00C9FCEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34ABF82C2578E62A00C9FCEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		34ABF82F2578E62A00C9FCEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34ABF8312578E62C00C9FCEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34ABF8342578E62C00C9FCEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348054FD257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework in Frameworks */,
 				50FD2925C9337065173907B6 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +75,23 @@
 				08E7CA67124E0226F3D7A762 /* Pods-Demo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		34805500257FCF4100EF13BC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				34ABF82C2578E62A00C9FCEE /* LoginViewController.swift */,
+				34805508257FD88D00EF13BC /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3480550A257FDB2000EF13BC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				348086902580CE50001A0F41 /* UserDefaults.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		34ABF81C2578E62A00C9FCEE = {
@@ -78,8 +117,9 @@
 			children = (
 				34ABF8282578E62A00C9FCEE /* AppDelegate.swift */,
 				34ABF82A2578E62A00C9FCEE /* SceneDelegate.swift */,
-				34ABF82C2578E62A00C9FCEE /* ViewController.swift */,
 				34ABF82E2578E62A00C9FCEE /* Main.storyboard */,
+				3480550A257FDB2000EF13BC /* Utils */,
+				34805500257FCF4100EF13BC /* Login */,
 				34ABF8312578E62C00C9FCEE /* Assets.xcassets */,
 				34ABF8332578E62C00C9FCEE /* LaunchScreen.storyboard */,
 				34ABF8362578E62C00C9FCEE /* Info.plist */,
@@ -90,6 +130,7 @@
 		D165F8E83A3B282C64FE0BCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				348054FC257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework */,
 				0D276E3438E06455990AC1EA /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
@@ -107,6 +148,7 @@
 				34ABF8222578E62A00C9FCEE /* Frameworks */,
 				34ABF8232578E62A00C9FCEE /* Resources */,
 				DFD402BB9A842A0233A79162 /* [CP] Embed Pods Frameworks */,
+				348054FF257FBBE900EF13BC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34ABF82D2578E62A00C9FCEE /* ViewController.swift in Sources */,
+				34805509257FD88D00EF13BC /* LoginPresenter.swift in Sources */,
+				348086912580CE50001A0F41 /* UserDefaults.swift in Sources */,
+				34ABF82D2578E62A00C9FCEE /* LoginViewController.swift in Sources */,
 				34ABF8292578E62A00C9FCEE /* AppDelegate.swift in Sources */,
 				34ABF82B2578E62A00C9FCEE /* SceneDelegate.swift in Sources */,
 			);
@@ -360,6 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPYCCEF658;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,6 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPYCCEF658;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

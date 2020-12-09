@@ -6,6 +6,7 @@ target 'Demo' do
   use_frameworks!
 
   # Pods for Demo
-  pod 'ClaySDK', '1.8.2'
-
+  pod 'ClaySDK'
+  pod 'AppAuth'
+  
 end
