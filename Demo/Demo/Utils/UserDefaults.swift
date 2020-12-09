@@ -25,12 +25,17 @@ struct UserDefault<Value> {
 
 @propertyWrapper
 struct UserDefaultNSCoding<Value> where Value: NSObject, Value: NSSecureCoding {
-    let key: String
+    
+    enum Keys: String {
+        case serviceConfiguration, state
+    }
+    
+    let key: Keys
     var container: UserDefaults = .standard
 
     var wrappedValue: Value? {
         get {
-            guard let data = container.data(forKey: key) else {
+            guard let data = container.data(forKey: key.rawValue) else {
                 return nil
             }
             return try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Value
@@ -38,7 +43,7 @@ struct UserDefaultNSCoding<Value> where Value: NSObject, Value: NSSecureCoding {
         set {
             guard let value = newValue, let data = try? NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: false) else { return }
 
-            container.set(data, forKey: key)
+            container.set(data, forKey: key.rawValue)
         }
     }
 }

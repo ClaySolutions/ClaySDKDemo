@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>redirectLogin</key>
+	<string>nl.moboa.myclay.debug:/oauth2redirect/redirect</string>
+	<key>clientId</key>
+	<string>48b34030-9053-4a25-8a32-b8f0bde57ef2</string>
+	<key>issuer</key>
+	<string>https://clp-test-identityserver.my-clay.com</string>
+</dict>
+</plist>

@@ -8,24 +8,34 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     let presenter = LoginPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.discoverConfiguration { (result) in
-            switch result {
-            case .success:
-                break
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        presenter.view = self
+        presenter.discoverConfiguration()
     }
 
     @IBAction func didTapLogin(_ sender: Any) {
         presenter.login(viewController: self)
     }
+}
+
+extension LoginViewController: LoginViewProtocol {
+    func showError(message: String) {
+        errorLabel.text = message
+    }
     
+    func toggleLoginButton(enabled: Bool) {
+        loginButton.isEnabled = enabled
+    }
+    
+    func goToMainViewController() {
+        performSegue(withIdentifier: "mainSegue", sender: self)
+    }
 }
 
