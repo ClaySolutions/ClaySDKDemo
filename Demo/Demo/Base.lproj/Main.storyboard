@@ -56,19 +56,41 @@
             </objects>
             <point key="canvasLocation" x="-230" y="78"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Bj2-Xm-MSd">
             <objects>
-                <viewController id="gCZ-sK-W9o" sceneMemberID="viewController">
+                <viewController id="gCZ-sK-W9o" customClass="MainViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4u-pw-ZMb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0i-MI-nzS">
+                                <rect key="frame" x="100" y="756" width="214" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.53333333329999999" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <size key="titleShadowOffset" width="7" height="0.0"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGn-ij-SKH"/>
+                                    <action selector="didTapLogout:" destination="gCZ-sK-W9o" eventType="touchUpInside" id="IPH-ae-SKs"/>
+                                    <action selector="didTapLogout:" destination="qNd-Xu-1gP" eventType="touchUpInside" id="Ifu-Rt-Kox"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mkt-EB-HvA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d0i-MI-nzS" firstAttribute="centerX" secondItem="Mkt-EB-HvA" secondAttribute="centerX" id="GUP-6f-7dL"/>
+                            <constraint firstItem="Mkt-EB-HvA" firstAttribute="bottom" secondItem="d0i-MI-nzS" secondAttribute="bottom" constant="70" id="kJY-Gy-qBN"/>
+                            <constraint firstItem="d0i-MI-nzS" firstAttribute="leading" secondItem="Mkt-EB-HvA" secondAttribute="leading" constant="100" id="m4R-I6-NXY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NZl-Uz-m3H"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpC-ef-1hJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qNd-Xu-1gP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="604" y="78"/>
         </scene>

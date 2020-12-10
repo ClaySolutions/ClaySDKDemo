@@ -19,6 +19,13 @@ class LoginViewController: UIViewController {
         presenter.view = self
         presenter.discoverConfiguration()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if presenter.isLoggedIn {
+            goToMainViewController()
+        }
+    }
 
     @IBAction func didTapLogin(_ sender: Any) {
         presenter.login(viewController: self)

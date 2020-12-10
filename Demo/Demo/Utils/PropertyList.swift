@@ -16,10 +16,10 @@ struct PropertyList<Value> where Value: Decodable {
     
     let key: Keys
 
-    var wrappedValue: Value? {
+    var wrappedValue: Value {
         let path = Bundle.main.path(forResource: key.rawValue, ofType: "plist")!
         let data = FileManager.default.contents(atPath: path)!
-        return try? PropertyListDecoder().decode(Value.self, from: data)
+        return try! PropertyListDecoder().decode(Value.self, from: data)
     }
 }
 
@@ -27,6 +27,9 @@ struct Configuration: Codable {
     var issuer: String?
     var clientId: String?
     var redirectLogin: String?
+    var redirectLogout: String?
+    var apiPublicKey: String?
+    var apiUrl: String
     
     var issuerURL: URL {
         URL(string: issuer!)!
@@ -34,5 +37,9 @@ struct Configuration: Codable {
     
     var redirectLoginURL: URL {
         URL(string: redirectLogin!)!
+    }
+    
+    var redirectLogoutURL: URL {
+        URL(string: redirectLogout!)!
     }
 }

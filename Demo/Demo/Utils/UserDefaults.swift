@@ -41,7 +41,11 @@ struct UserDefaultNSCoding<Value> where Value: NSObject, Value: NSSecureCoding {
             return try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Value
         }
         set {
-            guard let value = newValue, let data = try? NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: false) else { return }
+            guard let value = newValue else {
+                container.removeObject(forKey: key.rawValue)
+                return
+            }
+            guard let data = try? NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: false) else { return }
 
             container.set(data, forKey: key.rawValue)
         }

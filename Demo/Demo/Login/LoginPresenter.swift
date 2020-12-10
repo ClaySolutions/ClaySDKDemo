@@ -29,18 +29,19 @@ class LoginPresenter {
     private var state: OIDAuthState?
     
     @PropertyList(key: .configuration)
-    private var configuration: Configuration?
+    private var configuration: Configuration
     
     private let scopes = [OIDScopeOpenID, OIDScopeProfile, "user_api.full_access", "offline_access"]
     
+    var isLoggedIn: Bool {
+        state != nil
+    }
     
     /// Fetches configuration for SaltoKS IDS. Configuration contains login, authenticate and other endpoints needed for using service. Configuration is save to UserDefaults for later use.
     func discoverConfiguration() {
         self.view?.toggleLoginButton(enabled: false)
         
-        guard let issuerUrl = configuration?.issuerURL else { return }
-        
-        OIDAuthorizationService.discoverConfiguration(forIssuer: issuerUrl) { (configuration, error) in
+        OIDAuthorizationService.discoverConfiguration(forIssuer: configuration.issuerURL) { (configuration, error) in
             if let error = error {
                 self.view?.showError(message: error.localizedDescription)
                 return
@@ -66,16 +67,15 @@ class LoginPresenter {
     
     private func createAuthorizationRequest() -> OIDAuthorizationRequest? {
         guard let serviceConfig = self.serviceConfig,
-              let config = self.configuration,
-              let clientId = config.clientId else { return nil }
+              let clientId = configuration.clientId else { return nil }
         
         return OIDAuthorizationRequest(
             configuration: serviceConfig,
             clientId: clientId,
             scopes: scopes,
-            redirectURL: config.redirectLoginURL,
+            redirectURL: configuration.redirectLoginURL,
             responseType: OIDResponseTypeCode,
-            additionalParameters: nil //["login_hint": email] if you set this it will automatically populate email field
+            additionalParameters: nil //["login_hint": "test@test.com"] if you set this it will automatically populate email field
         )
     }
     
@@ -97,4 +97,6 @@ class LoginPresenter {
             self.view?.goToMainViewController()
         }
     }
+    
+    
 }
