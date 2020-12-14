@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>apiUrl</key>
-	<string>https://clp-accept-user.my-clay.com/v1.1</string>
+	<string>https://clp-test-user.my-clay.com/v1.1</string>
 	<key>apiPublicKey</key>
 	<string>MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkGIqR7bC6cpt9DbMfFt8FpP1BEtlfbgayuMwMhXRrk1bRidhJXcGVvjocuol7xudJ8rWMNJr4sbhoTW3/KprhA==</string>
 	<key>redirectLogout</key>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3446E30C2582682A00AB0815 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446E30B2582682A00AB0815 /* DeviceService.swift */; };
+		3475E5E72584CB3E00A56C02 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475E5E62584CB3E00A56C02 /* AuthService.swift */; };
 		348054FD257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348054FC257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework */; };
 		348054FE257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 348054FC257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		34805509257FD88D00EF13BC /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805508257FD88D00EF13BC /* LoginPresenter.swift */; };
@@ -20,6 +21,9 @@
 		34ABF8302578E62A00C9FCEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34ABF82E2578E62A00C9FCEE /* Main.storyboard */; };
 		34ABF8322578E62C00C9FCEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34ABF8312578E62C00C9FCEE /* Assets.xcassets */; };
 		34ABF8352578E62C00C9FCEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34ABF8332578E62C00C9FCEE /* LaunchScreen.storyboard */; };
+		34B4AE072583765A00B3FEE0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4AE062583765A00B3FEE0 /* NetworkService.swift */; };
+		34B4AE0C2583B17B00B3FEE0 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4AE0B2583B17B00B3FEE0 /* Device.swift */; };
+		34B4AE0E2583B6F900B3FEE0 /* MobileKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4AE0D2583B6F900B3FEE0 /* MobileKey.swift */; };
 		34B77A1F25824448006FC23F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B77A1E25824448006FC23F /* MainViewController.swift */; };
 		34B77A2125824480006FC23F /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B77A2025824480006FC23F /* MainPresenter.swift */; };
 		50FD2925C9337065173907B6 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D276E3438E06455990AC1EA /* Pods_Demo.framework */; };
@@ -43,6 +47,7 @@
 		08E7CA67124E0226F3D7A762 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		0D276E3438E06455990AC1EA /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3446E30B2582682A00AB0815 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
+		3475E5E62584CB3E00A56C02 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		348054FC257FBBE900EF13BC /* SaltoJustINMobileSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SaltoJustINMobileSDK.xcframework; sourceTree = "<group>"; };
 		34805508257FD88D00EF13BC /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		348086902580CE50001A0F41 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 		34ABF8312578E62C00C9FCEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34ABF8342578E62C00C9FCEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34ABF8362578E62C00C9FCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34B4AE062583765A00B3FEE0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		34B4AE0B2583B17B00B3FEE0 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		34B4AE0D2583B6F900B3FEE0 /* MobileKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileKey.swift; sourceTree = "<group>"; };
 		34B77A1E25824448006FC23F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		34B77A2025824480006FC23F /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		4C7FE1E97555D126399FABC6 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				3446E30B2582682A00AB0815 /* DeviceService.swift */,
+				34B4AE062583765A00B3FEE0 /* NetworkService.swift */,
+				3475E5E62584CB3E00A56C02 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 				34ABF8282578E62A00C9FCEE /* AppDelegate.swift */,
 				34ABF82A2578E62A00C9FCEE /* SceneDelegate.swift */,
 				34ABF82E2578E62A00C9FCEE /* Main.storyboard */,
+				34B4AE082583AD9900B3FEE0 /* Models */,
 				3446E30A2582681500AB0815 /* Services */,
 				3480550A257FDB2000EF13BC /* Utils */,
 				34805500257FCF4100EF13BC /* Login */,
@@ -147,6 +158,15 @@
 				3480869225811365001A0F41 /* Configuration.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		34B4AE082583AD9900B3FEE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34B4AE0B2583B17B00B3FEE0 /* Device.swift */,
+				34B4AE0D2583B6F900B3FEE0 /* MobileKey.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		34B77A1D258243BB006FC23F /* Main */ = {
@@ -283,9 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B4AE0C2583B17B00B3FEE0 /* Device.swift in Sources */,
+				34B4AE072583765A00B3FEE0 /* NetworkService.swift in Sources */,
 				34B77A1F25824448006FC23F /* MainViewController.swift in Sources */,
+				34B4AE0E2583B6F900B3FEE0 /* MobileKey.swift in Sources */,
 				34805509257FD88D00EF13BC /* LoginPresenter.swift in Sources */,
 				348086912580CE50001A0F41 /* UserDefaults.swift in Sources */,
+				3475E5E72584CB3E00A56C02 /* AuthService.swift in Sources */,
 				34B77A2125824480006FC23F /* MainPresenter.swift in Sources */,
 				3480869525811411001A0F41 /* PropertyList.swift in Sources */,
 				34ABF82D2578E62A00C9FCEE /* LoginViewController.swift in Sources */,

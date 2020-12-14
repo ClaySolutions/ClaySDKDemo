@@ -10,7 +10,10 @@ import AppAuth
 import ClaySDK
 
 protocol MainViewProtocol {
+    
     func didLogout()
+    
+    func showError(message: String)
 }
 
 class MainPresenter {
@@ -19,47 +22,39 @@ class MainPresenter {
     
     private let deviceService = DeviceService()
     
-    @UserDefaultNSCoding(key: .state)
-    private var state: OIDAuthState?
-    
-    @UserDefaultNSCoding(key: .serviceConfiguration)
-    private var serviceConfig: OIDServiceConfiguration?
+    private let authService = AuthService()
     
     @PropertyList(key: .configuration)
-    private var configuration: Configuration?
+    private var configuration: Configuration
     
     private lazy var claySDK: ClaySDK = {
-        ClaySDK(installationUID: UIDevice.current.identifierForVendor!.uuidString, apiKey: configuration!.apiPublicKey!, delegate: self)
+        ClaySDK(installationUID: UIDevice.current.identifierForVendor!.uuidString, apiKey: configuration.apiPublicKey!, delegate: self)
     }()
     
     func logout(viewController: UIViewController) {
-        guard let idToken = state?.lastTokenResponse?.idToken,
-              let serviceConfig = serviceConfig,
-              let logoutURL = configuration?.redirectLogoutURL,
-              let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-              let agent = OIDExternalUserAgentIOS(presenting: viewController) else { return }
-
-        let request = OIDEndSessionRequest(configuration: serviceConfig, idTokenHint: idToken, postLogoutRedirectURL: logoutURL, additionalParameters: nil)
-        appDelegate.flow = OIDAuthorizationService.present(request, externalUserAgent: agent) { (response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            if let response = response {
-                print(response)
-                HTTPCookieStorage.shared.cookies?.forEach { cookie in
-                    HTTPCookieStorage.shared.deleteCookie(cookie)
-                }
-                self.state = nil
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    self.view?.didLogout()
-                }
+        authService.logout(from: viewController) { (result) in
+            switch result {
+            case .success:
+                self.view?.didLogout()
+            case .failure(let error):
+                self.view?.showError(message: error.localizedDescription)
             }
         }
     }
     
     func registerDevice() {
-        deviceService.registerDevice(deviceName: UIDevice.current.name, deviceUID: UIDevice.current.identifierForVendor!.uuidString, publicKey: claySDK.getPublicKey())
+        deviceService.registerDevice(
+            deviceName: UIDevice.current.name,
+            deviceUID: UIDevice.current.identifierForVendor!.uuidString,
+            publicKey: claySDK.getPublicKey()
+        ) { result in
+            switch result {
+            case .success(let device):
+                print(device)
+            case .failure(let error):
+                self.view?.showError(message: error.localizedDescription)
+            }
+        }
     }
 }
 

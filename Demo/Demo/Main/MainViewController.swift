@@ -9,6 +9,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var openLockBtn: UIButton!
+    
+    
     let presenter = MainPresenter()
     
     override func viewDidLoad() {
@@ -23,11 +28,18 @@ class MainViewController: UIViewController {
     @IBAction func didTapLogout(_ sender: Any) {
         presenter.logout(viewController: self)
     }
+    
+    @IBAction func didTapOpenLock(_ sender: Any) {
+    }
 }
 
 
 extension MainViewController: MainViewProtocol {
     func didLogout() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func showError(message: String) {
+        errorLabel.text = message
     }
 }
