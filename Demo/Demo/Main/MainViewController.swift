@@ -22,7 +22,8 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.registerDevice()
+        openLockBtn.isHidden = true
+        presenter.checkDeviceAndMobileKey()
     }
     
     @IBAction func didTapLogout(_ sender: Any) {
@@ -30,6 +31,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func didTapOpenLock(_ sender: Any) {
+        presenter.openLock()
     }
 }
 
@@ -41,5 +43,13 @@ extension MainViewController: MainViewProtocol {
     
     func showError(message: String) {
         errorLabel.text = message
+    }
+    
+    func showStatus(message: String) {
+        statusLabel.text = message
+    }
+    
+    func toggleOpenButton(visible: Bool) {
+        openLockBtn.isHidden = !visible
     }
 }

@@ -15,6 +15,7 @@
 		348086912580CE50001A0F41 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348086902580CE50001A0F41 /* UserDefaults.swift */; };
 		3480869325811365001A0F41 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3480869225811365001A0F41 /* Configuration.plist */; };
 		3480869525811411001A0F41 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480869425811411001A0F41 /* PropertyList.swift */; };
+		34AB92982587ABD3004025BD /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AB92972587ABD3004025BD /* ListResponse.swift */; };
 		34ABF8292578E62A00C9FCEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABF8282578E62A00C9FCEE /* AppDelegate.swift */; };
 		34ABF82B2578E62A00C9FCEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABF82A2578E62A00C9FCEE /* SceneDelegate.swift */; };
 		34ABF82D2578E62A00C9FCEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABF82C2578E62A00C9FCEE /* LoginViewController.swift */; };
@@ -53,6 +54,7 @@
 		348086902580CE50001A0F41 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		3480869225811365001A0F41 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		3480869425811411001A0F41 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
+		34AB92972587ABD3004025BD /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		34ABF8252578E62A00C9FCEE /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34ABF8282578E62A00C9FCEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34ABF82A2578E62A00C9FCEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				34B4AE0B2583B17B00B3FEE0 /* Device.swift */,
 				34B4AE0D2583B6F900B3FEE0 /* MobileKey.swift */,
+				34AB92972587ABD3004025BD /* ListResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				34B4AE0C2583B17B00B3FEE0 /* Device.swift in Sources */,
 				34B4AE072583765A00B3FEE0 /* NetworkService.swift in Sources */,
+				34AB92982587ABD3004025BD /* ListResponse.swift in Sources */,
 				34B77A1F25824448006FC23F /* MainViewController.swift in Sources */,
 				34B4AE0E2583B6F900B3FEE0 /* MobileKey.swift in Sources */,
 				34805509257FD88D00EF13BC /* LoginPresenter.swift in Sources */,
@@ -466,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPYCCEF658;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,6 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPYCCEF658;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

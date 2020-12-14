@@ -11,12 +11,12 @@ struct Device: Codable {
     let id: String
     let deviceName: String
     let deviceUID: String
-    let mKey: MobileKey?
+    let mobileKey: MobileKey?
     
     enum CodingKeys: String, CodingKey {
         case id
         case deviceName = "device_name"
         case deviceUID = "device_uid"
-        case mKey = "mkey"
+        case mobileKey = "mkey"
     }
 }

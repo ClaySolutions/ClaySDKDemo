@@ -19,4 +19,23 @@ struct MobileKey: Codable {
         case expiryDate = "expiry_date"
         case registrationDate = "registration_date"
     }
+    
+    var isMobileKeyExpairingIn7days: Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        if let expiryDate = dateFormatter.date(from: expiryDate), let aWeekFromNow = Calendar.current.date(byAdding: .weekOfYear, value: 1, to: Date()) {
+            return expiryDate < aWeekFromNow
+        }
+        return false
+    }
+}
+
+struct MobileKeyData: Codable {
+    let mKeyData: String
+    
+    enum CodingKeys: String, CodingKey {
+        case mKeyData = "mkey_data"
+    }
 }

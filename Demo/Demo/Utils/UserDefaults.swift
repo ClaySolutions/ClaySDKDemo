@@ -51,3 +51,33 @@ struct UserDefaultNSCoding<Value> where Value: NSObject, Value: NSSecureCoding {
         }
     }
 }
+
+
+@propertyWrapper
+struct UserDefaultCodable<Value> where Value: Codable {
+    
+    enum Keys: String {
+        case device, mobileKey
+    }
+    
+    let key: Keys
+    var container: UserDefaults = .standard
+
+    var wrappedValue: Value? {
+        get {
+            guard let data = container.data(forKey: key.rawValue) else {
+                return nil
+            }
+            return try? JSONDecoder().decode(Value.self, from: data)
+        }
+        set {
+            guard let value = newValue else {
+                container.removeObject(forKey: key.rawValue)
+                return
+            }
+            guard let data = try? JSONEncoder().encode(value) else { return }
+
+            container.set(data, forKey: key.rawValue)
+        }
+    }
+}

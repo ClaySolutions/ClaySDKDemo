@@ -5,7 +5,7 @@
 	<key>apiUrl</key>
 	<string>https://clp-test-user.my-clay.com/v1.1</string>
 	<key>apiPublicKey</key>
-	<string>MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkGIqR7bC6cpt9DbMfFt8FpP1BEtlfbgayuMwMhXRrk1bRidhJXcGVvjocuol7xudJ8rWMNJr4sbhoTW3/KprhA==</string>
+	<string>MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEtcuihxN03eyMjtA+2yjj+NziBizntTKWidQBR30TvZ0WWyikrvcAlZnrOB41pYuBzj+ZXTrmy/cjhcOA5JdAKg==</string>
 	<key>redirectLogout</key>
 	<string>nl.moboa.myclay.debug:/oauth2redirect/logout</string>
 	<key>redirectLogin</key>
