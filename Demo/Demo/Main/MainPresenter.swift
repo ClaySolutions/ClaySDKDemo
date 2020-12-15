@@ -8,6 +8,7 @@
 import Foundation
 import AppAuth
 import ClaySDK
+import SaltoJustINMobileSDK
 
 protocol MainViewProtocol {
     
@@ -52,6 +53,7 @@ class MainPresenter {
     func openLock() {
         guard let mobileKey = mobileKey?.mKeyData else { return }
         claySDK.openDoor(with: mobileKey, delegate: self)
+        view?.showStatus(message: "Sending mobile key")
     }
     
     //MARK: MOBILE KEY AND DEVICE API HANDLING
@@ -158,7 +160,17 @@ extension MainPresenter: OpenDoorDelegate {
     }
     
     func didOpen(with result: ClayResult?) {
-        
+        guard let opResult = result?.getOpResult() else { return }
+        if opResult == AUTH_SUCCESS_CANCELLED_KEY {
+            view?.showStatus(message: "Mobile key expired, reactivating")
+            updateDeviceCertificate()
+            return
+        }
+        if SSOpResult.getGroup(opResult) == .groupAccepted {
+            view?.showStatus(message: "Mobile key received")
+            return
+        }
+        view?.showStatus(message: "Problem while sending mobile key")
     }
     
     func didReceiveTimeout() {

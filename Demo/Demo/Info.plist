@@ -75,5 +75,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>This app requires bluetooth access for BLE communication with peripherals.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>This app requires bluetooth access for BLE communication with peripherals.</string>
 </dict>
 </plist>
