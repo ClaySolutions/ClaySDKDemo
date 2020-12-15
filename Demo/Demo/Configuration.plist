@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>apiUrl</key>
-	<string>https://clp-test-user.my-clay.com/v1.1</string>
+	<string>https://clp-accept-user.my-clay.com/v1.1</string>
 	<key>apiPublicKey</key>
-	<string>MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEtcuihxN03eyMjtA+2yjj+NziBizntTKWidQBR30TvZ0WWyikrvcAlZnrOB41pYuBzj+ZXTrmy/cjhcOA5JdAKg==</string>
+	<string>MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFYDlLVhKz+qNQIBASs322cib/iwnnuSWczXSvU8GGYB6pgZgaCroCywHMPclFRehVsB+jYRJd6n4zkhDSGd5bQ==</string>
 	<key>redirectLogout</key>
-	<string>nl.moboa.myclay.debug:/oauth2redirect/logout</string>
+	<string></string>
 	<key>redirectLogin</key>
-	<string>nl.moboa.myclay.debug:/oauth2redirect/redirect</string>
+	<string></string>
 	<key>clientId</key>
-	<string>48b34030-9053-4a25-8a32-b8f0bde57ef2</string>
+	<string></string>
 	<key>issuer</key>
-	<string>https://clp-test-identityserver.my-clay.com</string>
+	<string>https://clp-accept-identityserver.my-clay.com</string>
 </dict>
 </plist>
