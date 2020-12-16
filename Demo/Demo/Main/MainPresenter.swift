@@ -41,7 +41,7 @@ class MainPresenter {
     private var deviceUID: String {
         //This can be any string that is unique for currently running device.
         //This identifier is used to check if user already registered device.
-        UIDevice.current.identifierForVendor!.uuidString
+        UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
     }
     
     private lazy var claySDK: ClaySDK = {

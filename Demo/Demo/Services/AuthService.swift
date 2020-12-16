@@ -47,7 +47,8 @@ class AuthService {
                 completion(.failure(error))
                 return
             }
-            let state = OIDAuthState(authorizationResponse: response!)
+            guard let response = response else { return }
+            let state = OIDAuthState(authorizationResponse: response)
             self.fetchTokensUpdate(state: state, completion: completion)
         }
     }
