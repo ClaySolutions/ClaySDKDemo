@@ -1,45 +1,66 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# ClaySDK Demo Application
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+This is a sample app that shows how to obtain a token for the SaltoKS's APIs 
+and activate an iOS device to be used to unlock a Salto lock via Mobile Key.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+By [Salto KS](https://saltoks.com/).
 
----
+## Getting Started
 
-## Edit a file
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+### Prerequisites
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+Obtain SaltoJustINMobileSDK.xcframework from dropbox folder shared with you.
+In order to be able to login to our APIs an integrator is supposed to receive an OpenId client configuration.
+This configuration will be specific and unique for any different integrator.
 
----
 
-## Create a file
+### Installing
 
-Next, you’ll add a new file to this repository.
+A step by step series of examples that tell you how to get a development env running
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+Put SaltoJustINMobileSDK.xcframework inside /Demo folder
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+Install CocoaPods by running:
 
----
+```
+pod install
+```
 
-## Clone a repository
+Open Demo.xcworkspace as your starting point
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+### Configuration.plist
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+This file is used to configure settings specific for your client.
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+Some of the fields will be already populated with Acceptance enviroment information.
+
+Put missing values for redirectLogin, redirectLogout and clientId provided by SaltoKS
+
+```
+<key>apiUrl</key>
+<string>https://clp-accept-user.my-clay.com/v1.1</string>
+<key>apiPublicKey</key>
+<string>MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFYDlLVhKz+qNQIBASs322cib/iwnnuSWczXSvU8GGYB6pgZgaCroCywHMPclFRehVsB+jYRJd6n4zkhDSGd5bQ==</string>
+<key>redirectLogout</key>
+<string></string>
+<key>redirectLogin</key>
+<string></string>
+<key>clientId</key>
+<string></string>
+<key>issuer</key>
+<string>https://clp-accept-identityserver.my-clay.com</string>
+```
+After you have everything ready you can run application.
+
+
+## Author
+
+* [ClaySolutions](https://github.com/ClaySolutions) ([Jakov](https://github.com/jakov-clay))
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+

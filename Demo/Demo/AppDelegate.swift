@@ -6,16 +6,31 @@
 //
 
 import UIKit
+import AppAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var flow: OIDExternalUserAgentSession?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+
+        guard let flow = self.flow else { return false }
+
+        if flow.resumeExternalUserAgentFlow(with: url) {
+            self.flow = nil
+            return true
+        }
+
+        return false
+    }
+
 
     // MARK: UISceneSession Lifecycle
 
