@@ -44,8 +44,8 @@ class MainPresenter {
         UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
     }
     
-    private lazy var claySDK: ClaySDK = {
-        ClaySDK(installationUID: deviceUID, apiKey: configuration.apiPublicKey!, delegate: self)
+    private lazy var claySDK: Clay = {
+        Clay(installationUID: deviceUID, apiKey: configuration.apiPublicKey!, delegate: self)
     }()
     
     //MARK: USING CLAY SDK TO OPEN DOOR
